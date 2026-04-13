@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindersKeepers | Home</title>
+	
+	<script>
+(function () {
+    const savedMode = localStorage.getItem("mode");
+    if (savedMode === "dark") {
+        document.documentElement.classList.add("dark");
+    }
+})();
+</script>
+
+    <link rel="stylesheet" href="style.css">
+	
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+    <img src="spu-logo.png" alt="FindersKeepers Logo" class="logo">
+    <span>FindersKeepers</span>
+    </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="report.html">Report Item</a></li>
+                    <li><a href="items.html">Items List</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="modeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to FindersKeepers!</h2>
+            <p>Helping students and guests find lost items quickly.</p>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by name, category, or location...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- reported items -->
+    <section class="recent-items">
+        <h2>Recently Reported Items</h2>
+        <div class="items-container" id="itemsContainer">
+    
+            <div class="item-card">
+                <img src="laptop.jpg" alt="Laptop">
+                <h3>MacBook Pro</h3>
+                <p>Category: Electronics</p>
+                <p>Location: Library</p>
+                <button class="claim-btn">Claim</button>
+            </div>
+            <div class="item-card">
+                <img src="backpack.jpg" alt="Backpack">
+                <h3>White Backpack</h3>
+                <p>Category: Clothes</p>
+                <p>Location: Cafeteria</p>
+                <button class="claim-btn">Claim</button>
+            </div>
+            <div class="item-card">
+                <img src="id.jpg" alt="ID Card">
+                <h3>Student ID Card</h3>
+                <p>Category: Documents</p>
+                <p>Location: Lecture Hall</p>
+                <button class="claim-btn">Claim</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FindersKeepers. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

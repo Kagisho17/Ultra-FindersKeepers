@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindersKeepers | Items List</title>
+	
+	<script>
+(function () {
+    const savedMode = localStorage.getItem("mode");
+    if (savedMode === "dark") {
+        document.documentElement.classList.add("dark");
+    }
+})();
+</script>
+
+    <link rel="stylesheet" href="style.css">
+	
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <p id="status"></p>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="spu-logo.png" alt="FindersKeepers Logo" class="logo">
+                <span>FindersKeepers</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report.html">Report Item</a></li>
+                    <li><a href="items.html" class="active">Items List</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="modeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- search and filter -->
+    <section class="filter-section">
+        <input type="text" id="itemSearch" placeholder="Search by name...">
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothes">Clothes</option>
+            <option value="Documents">Documents</option>
+            <option value="Others">Others</option>
+        </select>
+        <select id="locationFilter">
+            <option value="">All Locations</option>
+            <option value="Library">Library</option>
+            <option value="Cafeteria">Cafeteria</option>
+            <option value="Lecture Hall">Lecture Hall</option>
+        </select>
+    </section>
+
+    <!-- items list -->
+    <section class="items-list">
+        <div class="items-container" id="itemsContainer">
+            
+            <div class="item-card" data-category="Electronics" data-location="Library">
+                <img src="laptop.jpg" alt="Laptop">
+                <h3>MacBook Pro</h3>
+                <p>Category: Electronics</p>
+                <p>Location: Library</p>
+                <button class="claim-btn">Claim</button>
+            </div>
+            <div class="item-card" data-category="Clothes" data-location="Cafeteria">
+                <img src="backpack.jpg" alt="Backpack">
+                <h3>Black Backpack</h3>
+                <p>Category: Clothes</p>
+                <p>Location: Cafeteria</p>
+                <button class="claim-btn">Claim</button>
+            </div>
+            <div class="item-card" data-category="Documents" data-location="Lecture Hall">
+                <img src="Id.jpg" alt="ID Card">
+                <h3>Student ID Card</h3>
+                <p>Category: Documents</p>
+                <p>Location: Lecture Hall</p>
+                <button class="claim-btn">Claim</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FindersKeepers. All rights reserved.</p>
+    </footer>
+
+
+    
+</body>
+</html>

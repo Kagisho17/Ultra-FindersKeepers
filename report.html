@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindersKeepers | Report Item</title>
+	
+	<script>
+(function () {
+    const savedMode = localStorage.getItem("mode");
+    if (savedMode === "dark") {
+        document.documentElement.classList.add("dark");
+    }
+})();
+</script>
+
+    <link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="spu-logo.png" alt="FindersKeepers Logo" class="logo">
+                <span>FindersKeepers</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report.html" class="active">Report Item</a></li>
+                    <li><a href="items.html">Items List</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="modeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- report form -->
+    <section class="report-section">
+        <h2>Report Lost or Found Item</h2>
+        <form id="reportForm" class="report-form">
+            <div class="form-group">
+                <label for="itemName">Item Name*</label>
+                <input type="text" id="itemName" placeholder="Enter item name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category*</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Documents">Documents</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location*</label>
+                <input type="text" id="location" placeholder="Enter location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Enter description (optional)"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="imageUpload">Upload Image (optional)</label>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Report</button>
+        </form>
+        <p id="successMsg" class="success-msg"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FindersKeepers. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindersKeepers | About</title>
+	
+		<script>
+(function () {
+    const savedMode = localStorage.getItem("mode");
+    if (savedMode === "dark") {
+        document.documentElement.classList.add("dark");
+    }
+})();
+</script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--  Navbar -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="spu-logo.png" alt="FindersKeepers Logo" class="logo">
+                <span>FindersKeepers</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report.html">Report Item</a></li>
+                    <li><a href="items.html">Items List</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="modeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- about -->
+    <section class="about-section">
+        <div class="about-container">
+            <h2>About FindersKeepers</h2>
+            <p>
+                FindersKeepers is a dedicated lost-and-found platform for students and guests at our institution. 
+                Our mission is to help people quickly report, search, and claim lost items in a safe and easy way.
+            </p>
+            <p>
+                Users can report lost or found items, browse recently reported items, and claim belongings. 
+                Our platform ensures items are reunited with their owners efficiently.
+            </p>
+            <p>
+                We value trust, transparency, and convenience. With a <strong>modern design, search functionality, and responsive layout</strong>, 
+                FindersKeepers makes finding lost items effortless.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FindersKeepers. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
